@@ -1,0 +1,47 @@
+name: Scrape newest flight prices
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * *'
+
+jobs:
+    scrape:
+        name: Scrape
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout Source code
+                uses: actions/checkout@v3
+                # with:
+                #     token: ${{ secrets.GH_TOKEN }}
+
+            -   name: Use Node.js 16
+                uses: actions/setup-node@v3
+                with:
+                    node-version: 16
+                    cache: 'npm'
+                    cache-dependency-path: 'package-lock.json'
+
+            -   name: Install Dependencies, browsers and xvfb
+                run: |
+                    npm ci
+                    npx playwright install
+                    sudo apt-get update xvfb
+                    sudo apt-get install xvfb
+
+            -   name: Remove old videos
+                run: |
+                    rm -rf videos/*
+
+            -   name: Run the scraper
+                run: |
+                    npm start
+
+            -   name: Commit the version bump
+                uses: stefanzweifel/git-auto-commit-action@v4
+                with:
+                  branch: master
+                  commit_message: 'auto: [skip ci] upload scrape results'
+                  file_pattern: 'results/* videos/*'
+                  commit_user_name: JindrichBot
+                  commit_user_email: bot@jindrich.bar
+                  commit_author: JindrichBot <bot@jindrich.bar>
