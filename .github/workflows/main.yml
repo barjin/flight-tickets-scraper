@@ -1,6 +1,10 @@
 name: Scrape newest flight prices
 on:
     workflow_dispatch:
+        inputs:
+            record_videos:
+                required: false
+                type: boolean
     schedule:
         - cron: '0 0 * * *'
 
@@ -34,14 +38,20 @@ jobs:
 
             -   name: Run the scraper
                 run: |
-                    npm start
+                    VIDEO=${{ github.event.inputs.record_videos }} npm start
+
+            -   name: Upload debug videos
+                uses: actions/upload-artifact@v2
+                with:
+                    name: debug-videos
+                    path: videos
 
             -   name: Commit the version bump
                 uses: stefanzweifel/git-auto-commit-action@v4
                 with:
                   branch: master
                   commit_message: 'auto: [skip ci] upload scrape results'
-                  file_pattern: 'results/* videos/*'
+                  file_pattern: 'results/*'
                   commit_user_name: JindrichBot
                   commit_user_email: bot@jindrich.bar
                   commit_author: JindrichBot <bot@jindrich.bar>

@@ -112,12 +112,12 @@ console.log(`"Airport","Price (USD)","From","To"`);
   const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8').split('\n');
 
   const browser = await chromium.launch({
-    headless: true
+    headless: false,
   });
   const context = await browser.newContext({
-    recordVideo: {
+    recordVideo: process.env['VIDEO']==='true' ? {
       dir: path.join(__dirname, 'videos'),
-    },
+    } : undefined,
   });
   const page = await context.newPage();
 
