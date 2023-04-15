@@ -109,7 +109,7 @@ async function getFlightPrices(destination, options = {}) {
 
 console.log(`"Airport","Price (USD)","From","To"`);
 (async () => {
-  const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8').split('\n').slice(0,5);
+  const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8').split('\n');
 
   const browser = await chromium.launch({
     headless: true
