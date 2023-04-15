@@ -107,7 +107,7 @@ async function getFlightPrices(destination, options = {}) {
   return prices;
 };
 
-console.log(`"Airport","Price (CZK)","From","To"`);
+console.log(`"Airport","Price (USD)","From","To"`);
 (async () => {
   const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8').split('\n').slice(0,5);
 
