@@ -39,6 +39,10 @@ jobs:
             -   name: Run the scraper
                 run: |
                     VIDEO=${{ github.event.inputs.record_videos }} npm start
+            
+            -   name: Convert the csv output to json
+                run: |
+                    scripts/csvToJson.sh results/recent.csv > results/recent.json
 
             -   name: Upload debug videos
                 uses: actions/upload-artifact@v2
@@ -46,12 +50,12 @@ jobs:
                     name: debug-videos
                     path: videos
 
-            -   name: Commit the version bump
+            -   name: Commit the new files
                 uses: stefanzweifel/git-auto-commit-action@v4
                 with:
                   branch: master
                   commit_message: 'auto: [skip ci] upload scrape results'
                   file_pattern: 'results/*'
-                  commit_user_name: JindrichBot
+                  commit_user_name: barjin
                   commit_user_email: bot@jindrich.bar
-                  commit_author: JindrichBot <bot@jindrich.bar>
+                  commit_author: barjin <bot@jindrich.bar>
