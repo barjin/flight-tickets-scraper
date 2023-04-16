@@ -1,0 +1,57 @@
+name: Build and deploy the frontend app
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - master
+        paths:
+            - 'website/**'
+
+jobs:
+    build:
+        name: Build the frontend app
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout Source code
+                uses: actions/checkout@v3
+                with:
+                    token: ${{ secrets.GH_TOKEN }}
+
+            -   name: Use Node.js 16
+                uses: actions/setup-node@v3
+                with:
+                    node-version: 16
+                    cache: 'npm'
+
+            -   name: Install dependencies
+                run: |
+                    cd website
+                    npm ci
+                    cd ..
+
+            -   name: Build the app
+                run: |
+                    cd website
+                    npm run build
+
+            -   name: Upload the build as an artifact
+                uses: actions/upload-artifact@v2
+                with:
+                    name: github-pages
+                    path: website/build
+
+    deploy:
+        needs: build
+        permissions:
+            pages: write     
+            id-token: write  
+    
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+    
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v1
