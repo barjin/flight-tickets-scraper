@@ -184,7 +184,7 @@
   {
     "City": "Palma de Mallorca",
     "Airport": "PMI",
-    "Price (USD)": "171",
+    "Price (USD)": "166",
     "From": "2023-05-14T00:00:00.000Z",
     "To": "2023-05-22T00:00:00.000Z"
   },
@@ -301,11 +301,11 @@
     "To": "2023-05-03T00:00:00.000Z"
   },
   {
-    "City": "Arnavutköy",
-    "Airport": " Istanbul",
-    "Price (USD)": "176",
-    "From": "2023-05-16T00:00:00.000Z",
-    "To": "2023-05-24T00:00:00.000Z"
+    "City": "Istanbul",
+    "Airport": "IST",
+    "Price (USD)": "229",
+    "From": "2023-05-15T00:00:00.000Z",
+    "To": "2023-05-23T00:00:00.000Z"
   },
   {
     "City": "Belgrade",
@@ -313,47 +313,5 @@
     "Price (USD)": "231",
     "From": "2023-05-18T00:00:00.000Z",
     "To": "2023-05-26T00:00:00.000Z"
-  },
-  {
-    "City": "node:internal/process/promises:279",
-    "Airport": null,
-    "Price (USD)": null,
-    "From": null,
-    "To": null
-  },
-  {
-    "City": "            triggerUncaughtException(err",
-    "Airport": " true /* fromPromise */);",
-    "Price (USD)": null,
-    "From": null,
-    "To": null
-  },
-  {
-    "City": "            ^",
-    "Airport": null,
-    "Price (USD)": null,
-    "From": null,
-    "To": null
-  },
-  {
-    "City": "locator.fill: value: expected string",
-    "Airport": " got undefined",
-    "Price (USD)": null,
-    "From": null,
-    "To": null
-  },
-  {
-    "City": "    at getFlightPrices (/home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:63:61)",
-    "Airport": null,
-    "Price (USD)": null,
-    "From": null,
-    "To": null
-  },
-  {
-    "City": "    at async /home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:139:26",
-    "Airport": null,
-    "Price (USD)": null,
-    "From": null,
-    "To": null
   }
 ]

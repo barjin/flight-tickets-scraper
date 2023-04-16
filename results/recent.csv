@@ -25,7 +25,7 @@
 "Barcelona","BCN","120","2023-06-02T00:00:00.000Z","2023-06-10T00:00:00.000Z"
 "Madrid","MAD","184","2023-05-20T00:00:00.000Z","2023-05-28T00:00:00.000Z"
 "Málaga","AGP","268","2023-06-06T00:00:00.000Z","2023-06-14T00:00:00.000Z"
-"Palma de Mallorca","PMI","171","2023-05-14T00:00:00.000Z","2023-05-22T00:00:00.000Z"
+"Palma de Mallorca","PMI","166","2023-05-14T00:00:00.000Z","2023-05-22T00:00:00.000Z"
 "Paris","CDG","146","2023-05-14T00:00:00.000Z","2023-05-22T00:00:00.000Z"
 "Paris","ORY","74","2023-06-07T00:00:00.000Z","2023-06-15T00:00:00.000Z"
 "Bâle/Mulhouse","BSL","92","2023-05-28T00:00:00.000Z","2023-06-05T00:00:00.000Z"
@@ -42,12 +42,5 @@
 "Bucharest","OTP","90","2023-06-18T00:00:00.000Z","2023-06-26T00:00:00.000Z"
 "Geneva","GVA","114","2023-06-22T00:00:00.000Z","2023-06-30T00:00:00.000Z"
 "Zurich","ZRH","190","2023-04-25T00:00:00.000Z","2023-05-03T00:00:00.000Z"
-"Arnavutköy"," Istanbul","176","2023-05-16T00:00:00.000Z","2023-05-24T00:00:00.000Z"
+"Istanbul","IST","229","2023-05-15T00:00:00.000Z","2023-05-23T00:00:00.000Z"
 "Belgrade","BEG","231","2023-05-18T00:00:00.000Z","2023-05-26T00:00:00.000Z"
-node:internal/process/promises:279
-            triggerUncaughtException(err, true /* fromPromise */);
-            ^
-
-locator.fill: value: expected string, got undefined
-    at getFlightPrices (/home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:63:61)
-    at async /home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:139:26
