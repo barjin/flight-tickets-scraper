@@ -6,7 +6,9 @@ on:
             - master
         paths:
             - 'website/**'
-
+permissions:
+    contents: write
+              
 jobs:
     build:
         name: Build the frontend app
@@ -34,24 +36,7 @@ jobs:
                     cd website
                     npm run build
 
-            -   name: Upload the build as an artifact
-                uses: actions/upload-artifact@v1
-                with:
-                    name: github-pages
-                    path: website/build
-
-    deploy:
-        needs: build
-        permissions:
-            pages: write     
-            id-token: write  
-    
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-    
-        runs-on: ubuntu-latest
-        steps:
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v1
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: website/build
