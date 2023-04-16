@@ -1,0 +1,278 @@
+[
+  {
+    "Airport": "KEF",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "BRU",
+    "Price (USD)": "132",
+    "From": "2023-05-02T00:00:00.000Z",
+    "To": "2023-05-10T00:00:00.000Z"
+  },
+  {
+    "Airport": "FRA",
+    "Price (USD)": "177",
+    "From": "2023-04-29T00:00:00.000Z",
+    "To": "2023-05-07T00:00:00.000Z"
+  },
+  {
+    "Airport": "CGN",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "DUS",
+    "Price (USD)": "136",
+    "From": "2023-06-02T00:00:00.000Z",
+    "To": "2023-06-10T00:00:00.000Z"
+  },
+  {
+    "Airport": "MUC",
+    "Price (USD)": "170",
+    "From": "2023-06-09T00:00:00.000Z",
+    "To": "2023-06-17T00:00:00.000Z"
+  },
+  {
+    "Airport": "HEL",
+    "Price (USD)": "225",
+    "From": "2023-06-06T00:00:00.000Z",
+    "To": "2023-06-14T00:00:00.000Z"
+  },
+  {
+    "Airport": "MAN",
+    "Price (USD)": "104",
+    "From": "2023-05-24T00:00:00.000Z",
+    "To": "2023-06-01T00:00:00.000Z"
+  },
+  {
+    "Airport": "LTN",
+    "Price (USD)": "71",
+    "From": "2023-05-26T00:00:00.000Z",
+    "To": "2023-06-03T00:00:00.000Z"
+  },
+  {
+    "Airport": "LGW",
+    "Price (USD)": "132",
+    "From": "2023-06-21T00:00:00.000Z",
+    "To": "2023-06-29T00:00:00.000Z"
+  },
+  {
+    "Airport": "LHR",
+    "Price (USD)": "154",
+    "From": "2023-04-25T00:00:00.000Z",
+    "To": "2023-05-03T00:00:00.000Z"
+  },
+  {
+    "Airport": "EDI",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "STN",
+    "Price (USD)": "77",
+    "From": "2023-05-23T00:00:00.000Z",
+    "To": "2023-05-31T00:00:00.000Z"
+  },
+  {
+    "Airport": "AMS",
+    "Price (USD)": "119",
+    "From": "2023-06-09T00:00:00.000Z",
+    "To": "2023-06-17T00:00:00.000Z"
+  },
+  {
+    "Airport": "EIN",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "DUB",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "CPH",
+    "Price (USD)": "76",
+    "From": "2023-06-13T00:00:00.000Z",
+    "To": "2023-06-21T00:00:00.000Z"
+  },
+  {
+    "Airport": "LUX",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "OSL",
+    "Price (USD)": "103",
+    "From": "2023-05-27T00:00:00.000Z",
+    "To": "2023-06-04T00:00:00.000Z"
+  },
+  {
+    "Airport": "WAW",
+    "Price (USD)": "187",
+    "From": "2023-06-12T00:00:00.000Z",
+    "To": "2023-06-20T00:00:00.000Z"
+  },
+  {
+    "Airport": "ARN",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "RIX",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "VAR",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "BCN",
+    "Price (USD)": "125",
+    "From": "2023-04-25T00:00:00.000Z",
+    "To": "2023-05-03T00:00:00.000Z"
+  },
+  {
+    "Airport": "MAD",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "AGP",
+    "Price (USD)": "268",
+    "From": "2023-06-06T00:00:00.000Z",
+    "To": "2023-06-14T00:00:00.000Z"
+  },
+  {
+    "Airport": "PMI",
+    "Price (USD)": "166",
+    "From": "2023-05-14T00:00:00.000Z",
+    "To": "2023-05-22T00:00:00.000Z"
+  },
+  {
+    "Airport": "CDG",
+    "Price (USD)": "146",
+    "From": "2023-05-14T00:00:00.000Z",
+    "To": "2023-05-22T00:00:00.000Z"
+  },
+  {
+    "Airport": "ORY",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "BSL",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "ATH",
+    "Price (USD)": "221",
+    "From": "2023-05-09T00:00:00.000Z",
+    "To": "2023-05-17T00:00:00.000Z"
+  },
+  {
+    "Airport": "BUD",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "MXP",
+    "Price (USD)": "55",
+    "From": "2023-05-31T00:00:00.000Z",
+    "To": "2023-06-08T00:00:00.000Z"
+  },
+  {
+    "Airport": "BGY",
+    "Price (USD)": "60",
+    "From": "2023-05-30T00:00:00.000Z",
+    "To": "2023-06-07T00:00:00.000Z"
+  },
+  {
+    "Airport": "BLQ",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "VCE",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "FCO",
+    "Price (USD)": "67",
+    "From": "2023-06-13T00:00:00.000Z",
+    "To": "2023-06-21T00:00:00.000Z"
+  },
+  {
+    "Airport": "NAP",
+    "Price (USD)": "77",
+    "From": "2023-06-07T00:00:00.000Z",
+    "To": "2023-06-15T00:00:00.000Z"
+  },
+  {
+    "Airport": "VIE",
+    "Price (USD)": "189",
+    "From": "2023-05-06T00:00:00.000Z",
+    "To": "2023-05-14T00:00:00.000Z"
+  },
+  {
+    "Airport": "LIS",
+    "Price (USD)": "289",
+    "From": "2023-06-08T00:00:00.000Z",
+    "To": "2023-06-16T00:00:00.000Z"
+  },
+  {
+    "Airport": "OTP",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "GVA",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  },
+  {
+    "Airport": "ZRH",
+    "Price (USD)": "190",
+    "From": "2023-04-25T00:00:00.000Z",
+    "To": "2023-05-03T00:00:00.000Z"
+  },
+  {
+    "Airport": "IST",
+    "Price (USD)": "229",
+    "From": "2023-05-15T00:00:00.000Z",
+    "To": "2023-05-23T00:00:00.000Z"
+  },
+  {
+    "Airport": "BEG",
+    "Price (USD)": "231",
+    "From": "2023-05-18T00:00:00.000Z",
+    "To": "2023-05-26T00:00:00.000Z"
+  },
+  {
+    "Airport": "",
+    "Price (USD)": "undefined",
+    "From": "undefined",
+    "To": "undefined"
+  }
+]
