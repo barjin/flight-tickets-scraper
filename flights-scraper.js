@@ -5,6 +5,7 @@ const path = require('path');
 let BASE_DAY_COUNT = 4;
 
 async function getFlightPrices(destination, options = {}) {
+
   const { dayCount = 8, initialScroll = 0, maxScroll = 1, page } = options;
   let prices = [];
 
@@ -51,6 +52,10 @@ async function getFlightPrices(destination, options = {}) {
     await page.unroute(urlPredicate);
     return [];
   };
+
+  if (!destination) {
+    return flush();
+  }
 
   try {
     await page.getByPlaceholder('Where to?').click({timeout: 500});
