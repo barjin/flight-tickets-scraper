@@ -90,9 +90,9 @@ async function getFlightPrices(destination, options = {}) {
     await page.waitForTimeout(1000);
   }
 
-  if(await page.getByRole('heading', { name: 'No nonstop flights found' }).count() > 0) {
-    return flush();
-  }
+  // if(await page.getByRole('heading', { name: 'No nonstop flights found' }).count() > 0) {
+  //   return flush();
+  // }
   
   await page.getByRole('button', { name: 'Price graph' }).click();
   
