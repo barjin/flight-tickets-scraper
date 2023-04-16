@@ -2,7 +2,7 @@
 	import Offer from './Offer.svelte';
 	function sanitizeData(data) {
 		return data
-		.filter(x => x['Price (USD)'] !== 'undefined')
+		.filter(x => x['Price (USD)'] && x['Price (USD)'] !== 'undefined')
 		.map((item) => {
 			return {
 				city: item.City,
