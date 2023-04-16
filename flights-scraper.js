@@ -107,9 +107,11 @@ async function getFlightPrices(destination, options = {}) {
   return prices;
 };
 
-console.log(`"Airport","Price (USD)","From","To"`);
+console.log(`"City","Airport","Price (USD)","From","To"`);
 (async () => {
-  const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8').split('\n');
+  const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8')
+    .split('\n')
+    .map(x => x.split(',').map(x => x.replaceAll('"', '')));
 
   const browser = await chromium.launch({
     headless: false,
@@ -133,12 +135,12 @@ console.log(`"Airport","Price (USD)","From","To"`);
   await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
   await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
 
-  for (const targetAirport of targetAirports) {
+  for (const [city, targetAirport] of targetAirports) {
     const flightprices = await getFlightPrices(targetAirport, { dayCount: 8, page });
     const minPrice = Math.min(...flightprices.map((x) => x.price));
 
     const m = flightprices.find((x) => x.price === minPrice);
-    console.log(`"${targetAirport}","${m?.price}","${m?.dateFrom.toISOString()}","${m?.dateTo.toISOString() }"`);
+    console.log(`"${city}","${targetAirport}","${m?.price}","${m?.dateFrom.toISOString()}","${m?.dateTo.toISOString() }"`);
   }
 
   await browser.close();
