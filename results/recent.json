@@ -1,278 +1,359 @@
 [
   {
+    "City": "Reykjavík",
     "Airport": "KEF",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "421",
+    "From": "2023-06-08T00:00:00.000Z",
+    "To": "2023-06-16T00:00:00.000Z"
   },
   {
+    "City": "Zaventem",
     "Airport": "BRU",
     "Price (USD)": "132",
     "From": "2023-05-02T00:00:00.000Z",
     "To": "2023-05-10T00:00:00.000Z"
   },
   {
+    "City": "Frankfurt am Main",
     "Airport": "FRA",
     "Price (USD)": "177",
     "From": "2023-04-29T00:00:00.000Z",
     "To": "2023-05-07T00:00:00.000Z"
   },
   {
+    "City": "Köln (Cologne)",
     "Airport": "CGN",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "223",
+    "From": "2023-05-28T00:00:00.000Z",
+    "To": "2023-06-05T00:00:00.000Z"
   },
   {
+    "City": "Düsseldorf",
     "Airport": "DUS",
     "Price (USD)": "136",
     "From": "2023-06-02T00:00:00.000Z",
     "To": "2023-06-10T00:00:00.000Z"
   },
   {
+    "City": "Munich",
     "Airport": "MUC",
     "Price (USD)": "170",
     "From": "2023-06-09T00:00:00.000Z",
     "To": "2023-06-17T00:00:00.000Z"
   },
   {
+    "City": "Helsinki",
     "Airport": "HEL",
     "Price (USD)": "225",
     "From": "2023-06-06T00:00:00.000Z",
     "To": "2023-06-14T00:00:00.000Z"
   },
   {
+    "City": "Manchester",
     "Airport": "MAN",
     "Price (USD)": "104",
     "From": "2023-05-24T00:00:00.000Z",
     "To": "2023-06-01T00:00:00.000Z"
   },
   {
+    "City": "London",
     "Airport": "LTN",
     "Price (USD)": "71",
     "From": "2023-05-26T00:00:00.000Z",
     "To": "2023-06-03T00:00:00.000Z"
   },
   {
+    "City": "London",
     "Airport": "LGW",
     "Price (USD)": "132",
     "From": "2023-06-21T00:00:00.000Z",
     "To": "2023-06-29T00:00:00.000Z"
   },
   {
+    "City": "London",
     "Airport": "LHR",
     "Price (USD)": "154",
     "From": "2023-04-25T00:00:00.000Z",
     "To": "2023-05-03T00:00:00.000Z"
   },
   {
+    "City": "Edinburgh",
     "Airport": "EDI",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "133",
+    "From": "2023-05-08T00:00:00.000Z",
+    "To": "2023-05-16T00:00:00.000Z"
   },
   {
+    "City": "London",
     "Airport": "STN",
     "Price (USD)": "77",
     "From": "2023-05-23T00:00:00.000Z",
     "To": "2023-05-31T00:00:00.000Z"
   },
   {
+    "City": "Amsterdam",
     "Airport": "AMS",
     "Price (USD)": "119",
     "From": "2023-06-09T00:00:00.000Z",
     "To": "2023-06-17T00:00:00.000Z"
   },
   {
+    "City": "Eindhoven",
     "Airport": "EIN",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "157",
+    "From": "2023-05-15T00:00:00.000Z",
+    "To": "2023-05-23T00:00:00.000Z"
   },
   {
+    "City": "Dublin",
     "Airport": "DUB",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "178",
+    "From": "2023-06-12T00:00:00.000Z",
+    "To": "2023-06-20T00:00:00.000Z"
   },
   {
+    "City": "Copenhagen",
     "Airport": "CPH",
     "Price (USD)": "76",
     "From": "2023-06-13T00:00:00.000Z",
     "To": "2023-06-21T00:00:00.000Z"
   },
   {
+    "City": "Luxembourg",
     "Airport": "LUX",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "229",
+    "From": "2023-06-11T00:00:00.000Z",
+    "To": "2023-06-19T00:00:00.000Z"
   },
   {
+    "City": "Oslo",
     "Airport": "OSL",
     "Price (USD)": "103",
     "From": "2023-05-27T00:00:00.000Z",
     "To": "2023-06-04T00:00:00.000Z"
   },
   {
+    "City": "Warsaw",
     "Airport": "WAW",
     "Price (USD)": "187",
     "From": "2023-06-12T00:00:00.000Z",
     "To": "2023-06-20T00:00:00.000Z"
   },
   {
+    "City": "Stockholm",
     "Airport": "ARN",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "149",
+    "From": "2023-06-12T00:00:00.000Z",
+    "To": "2023-06-20T00:00:00.000Z"
   },
   {
+    "City": "Riga",
     "Airport": "RIX",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "153",
+    "From": "2023-05-22T00:00:00.000Z",
+    "To": "2023-05-30T00:00:00.000Z"
   },
   {
+    "City": "Varna",
     "Airport": "VAR",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "64",
+    "From": "2023-04-27T00:00:00.000Z",
+    "To": "2023-05-05T00:00:00.000Z"
   },
   {
+    "City": "Barcelona",
     "Airport": "BCN",
-    "Price (USD)": "125",
-    "From": "2023-04-25T00:00:00.000Z",
-    "To": "2023-05-03T00:00:00.000Z"
+    "Price (USD)": "120",
+    "From": "2023-06-02T00:00:00.000Z",
+    "To": "2023-06-10T00:00:00.000Z"
   },
   {
+    "City": "Madrid",
     "Airport": "MAD",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "184",
+    "From": "2023-05-20T00:00:00.000Z",
+    "To": "2023-05-28T00:00:00.000Z"
   },
   {
+    "City": "Málaga",
     "Airport": "AGP",
     "Price (USD)": "268",
     "From": "2023-06-06T00:00:00.000Z",
     "To": "2023-06-14T00:00:00.000Z"
   },
   {
+    "City": "Palma de Mallorca",
     "Airport": "PMI",
-    "Price (USD)": "166",
+    "Price (USD)": "171",
     "From": "2023-05-14T00:00:00.000Z",
     "To": "2023-05-22T00:00:00.000Z"
   },
   {
+    "City": "Paris",
     "Airport": "CDG",
     "Price (USD)": "146",
     "From": "2023-05-14T00:00:00.000Z",
     "To": "2023-05-22T00:00:00.000Z"
   },
   {
+    "City": "Paris",
     "Airport": "ORY",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "74",
+    "From": "2023-06-07T00:00:00.000Z",
+    "To": "2023-06-15T00:00:00.000Z"
   },
   {
+    "City": "Bâle/Mulhouse",
     "Airport": "BSL",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "92",
+    "From": "2023-05-28T00:00:00.000Z",
+    "To": "2023-06-05T00:00:00.000Z"
   },
   {
+    "City": "Athens",
     "Airport": "ATH",
     "Price (USD)": "221",
     "From": "2023-05-09T00:00:00.000Z",
     "To": "2023-05-17T00:00:00.000Z"
   },
   {
+    "City": "Budapest",
     "Airport": "BUD",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "38",
+    "From": "2023-05-15T00:00:00.000Z",
+    "To": "2023-05-23T00:00:00.000Z"
   },
   {
+    "City": "Milan",
     "Airport": "MXP",
     "Price (USD)": "55",
     "From": "2023-05-31T00:00:00.000Z",
     "To": "2023-06-08T00:00:00.000Z"
   },
   {
+    "City": "Milan",
     "Airport": "BGY",
     "Price (USD)": "60",
     "From": "2023-05-30T00:00:00.000Z",
     "To": "2023-06-07T00:00:00.000Z"
   },
   {
+    "City": "Bologna",
     "Airport": "BLQ",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "93",
+    "From": "2023-05-21T00:00:00.000Z",
+    "To": "2023-05-29T00:00:00.000Z"
   },
   {
+    "City": "Venice",
     "Airport": "VCE",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "56",
+    "From": "2023-05-22T00:00:00.000Z",
+    "To": "2023-05-30T00:00:00.000Z"
   },
   {
+    "City": "Rome",
     "Airport": "FCO",
     "Price (USD)": "67",
     "From": "2023-06-13T00:00:00.000Z",
     "To": "2023-06-21T00:00:00.000Z"
   },
   {
+    "City": "Napoli",
     "Airport": "NAP",
     "Price (USD)": "77",
     "From": "2023-06-07T00:00:00.000Z",
     "To": "2023-06-15T00:00:00.000Z"
   },
   {
+    "City": "Vienna",
     "Airport": "VIE",
     "Price (USD)": "189",
     "From": "2023-05-06T00:00:00.000Z",
     "To": "2023-05-14T00:00:00.000Z"
   },
   {
+    "City": "Lisbon",
     "Airport": "LIS",
     "Price (USD)": "289",
     "From": "2023-06-08T00:00:00.000Z",
     "To": "2023-06-16T00:00:00.000Z"
   },
   {
+    "City": "Bucharest",
     "Airport": "OTP",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "90",
+    "From": "2023-06-18T00:00:00.000Z",
+    "To": "2023-06-26T00:00:00.000Z"
   },
   {
+    "City": "Geneva",
     "Airport": "GVA",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "Price (USD)": "114",
+    "From": "2023-06-22T00:00:00.000Z",
+    "To": "2023-06-30T00:00:00.000Z"
   },
   {
+    "City": "Zurich",
     "Airport": "ZRH",
     "Price (USD)": "190",
     "From": "2023-04-25T00:00:00.000Z",
     "To": "2023-05-03T00:00:00.000Z"
   },
   {
-    "Airport": "IST",
-    "Price (USD)": "229",
-    "From": "2023-05-15T00:00:00.000Z",
-    "To": "2023-05-23T00:00:00.000Z"
+    "City": "Arnavutköy",
+    "Airport": " Istanbul",
+    "Price (USD)": "176",
+    "From": "2023-05-16T00:00:00.000Z",
+    "To": "2023-05-24T00:00:00.000Z"
   },
   {
+    "City": "Belgrade",
     "Airport": "BEG",
     "Price (USD)": "231",
     "From": "2023-05-18T00:00:00.000Z",
     "To": "2023-05-26T00:00:00.000Z"
   },
   {
-    "Airport": "",
-    "Price (USD)": "undefined",
-    "From": "undefined",
-    "To": "undefined"
+    "City": "node:internal/process/promises:279",
+    "Airport": null,
+    "Price (USD)": null,
+    "From": null,
+    "To": null
+  },
+  {
+    "City": "            triggerUncaughtException(err",
+    "Airport": " true /* fromPromise */);",
+    "Price (USD)": null,
+    "From": null,
+    "To": null
+  },
+  {
+    "City": "            ^",
+    "Airport": null,
+    "Price (USD)": null,
+    "From": null,
+    "To": null
+  },
+  {
+    "City": "locator.fill: value: expected string",
+    "Airport": " got undefined",
+    "Price (USD)": null,
+    "From": null,
+    "To": null
+  },
+  {
+    "City": "    at getFlightPrices (/home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:63:61)",
+    "Airport": null,
+    "Price (USD)": null,
+    "From": null,
+    "To": null
+  },
+  {
+    "City": "    at async /home/runner/work/flight-tickets-scraper/flight-tickets-scraper/flights-scraper.js:139:26",
+    "Airport": null,
+    "Price (USD)": null,
+    "From": null,
+    "To": null
   }
 ]
