@@ -12,7 +12,7 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<img src={welcome_fallback} alt="Welcome" />
+				<img src='./logo.svg' alt="FreeFlight" />
 			</picture>
 		</span>
 	</h1>

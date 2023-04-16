@@ -1,6 +1,4 @@
 <script>
-	import github from '$lib/images/github.svg';
-
 	const quote = (() => {
 		const quotes = [
 			'Flying cheap is flying smart - Gandhi',
@@ -15,7 +13,7 @@
 <header>
 	<div class="corner">
 		<a href="https://github.com/barjin/flight-tickets-scraper">
-			<img src={github} alt="GitHub" />
+			<img src='./github.svg' alt="GitHub" />
 		</a>
 		<span><b>{quote}</b></span>
 	</div>
