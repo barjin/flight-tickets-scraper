@@ -9,9 +9,9 @@
   {
     "City": "Zaventem",
     "Airport": "BRU",
-    "Price (USD)": "156",
-    "From": "2023-04-25T00:00:00.000Z",
-    "To": "2023-05-03T00:00:00.000Z"
+    "Price (USD)": "132",
+    "From": "2023-05-02T00:00:00.000Z",
+    "To": "2023-05-10T00:00:00.000Z"
   },
   {
     "City": "Frankfurt am Main",
@@ -31,8 +31,8 @@
     "City": "Düsseldorf",
     "Airport": "DUS",
     "Price (USD)": "136",
-    "From": "2023-06-02T00:00:00.000Z",
-    "To": "2023-06-10T00:00:00.000Z"
+    "From": "2023-05-13T00:00:00.000Z",
+    "To": "2023-05-21T00:00:00.000Z"
   },
   {
     "City": "Munich",
@@ -44,9 +44,9 @@
   {
     "City": "Helsinki",
     "Airport": "HEL",
-    "Price (USD)": "225",
-    "From": "2023-06-06T00:00:00.000Z",
-    "To": "2023-06-14T00:00:00.000Z"
+    "Price (USD)": "224",
+    "From": "2023-06-05T00:00:00.000Z",
+    "To": "2023-06-13T00:00:00.000Z"
   },
   {
     "City": "Manchester",
@@ -58,28 +58,28 @@
   {
     "City": "London",
     "Airport": "LTN",
-    "Price (USD)": "71",
+    "Price (USD)": "77",
     "From": "2023-05-26T00:00:00.000Z",
     "To": "2023-06-03T00:00:00.000Z"
   },
   {
     "City": "London",
     "Airport": "LGW",
-    "Price (USD)": "132",
+    "Price (USD)": "128",
     "From": "2023-06-21T00:00:00.000Z",
     "To": "2023-06-29T00:00:00.000Z"
   },
   {
     "City": "London",
     "Airport": "LHR",
-    "Price (USD)": "160",
-    "From": "2023-05-02T00:00:00.000Z",
-    "To": "2023-05-10T00:00:00.000Z"
+    "Price (USD)": "154",
+    "From": "2023-04-25T00:00:00.000Z",
+    "To": "2023-05-03T00:00:00.000Z"
   },
   {
     "City": "Edinburgh",
     "Airport": "EDI",
-    "Price (USD)": "133",
+    "Price (USD)": "142",
     "From": "2023-05-08T00:00:00.000Z",
     "To": "2023-05-16T00:00:00.000Z"
   },
@@ -93,16 +93,16 @@
   {
     "City": "Amsterdam",
     "Airport": "AMS",
-    "Price (USD)": "119",
+    "Price (USD)": "120",
     "From": "2023-06-09T00:00:00.000Z",
     "To": "2023-06-17T00:00:00.000Z"
   },
   {
     "City": "Eindhoven",
     "Airport": "EIN",
-    "Price (USD)": "166",
-    "From": "2023-06-08T00:00:00.000Z",
-    "To": "2023-06-16T00:00:00.000Z"
+    "Price (USD)": "168",
+    "From": "2023-05-15T00:00:00.000Z",
+    "To": "2023-05-23T00:00:00.000Z"
   },
   {
     "City": "Dublin",
@@ -121,28 +121,28 @@
   {
     "City": "Luxembourg",
     "Airport": "LUX",
-    "Price (USD)": "229",
+    "Price (USD)": "241",
     "From": "2023-06-11T00:00:00.000Z",
     "To": "2023-06-19T00:00:00.000Z"
   },
   {
     "City": "Oslo",
     "Airport": "OSL",
-    "Price (USD)": "103",
+    "Price (USD)": "102",
     "From": "2023-05-27T00:00:00.000Z",
     "To": "2023-06-04T00:00:00.000Z"
   },
   {
     "City": "Warsaw",
     "Airport": "WAW",
-    "Price (USD)": "187",
+    "Price (USD)": "186",
     "From": "2023-06-12T00:00:00.000Z",
     "To": "2023-06-20T00:00:00.000Z"
   },
   {
     "City": "Stockholm",
     "Airport": "ARN",
-    "Price (USD)": "149",
+    "Price (USD)": "148",
     "From": "2023-06-12T00:00:00.000Z",
     "To": "2023-06-20T00:00:00.000Z"
   },
@@ -163,28 +163,28 @@
   {
     "City": "Barcelona",
     "Airport": "BCN",
-    "Price (USD)": "125",
+    "Price (USD)": "124",
     "From": "2023-04-25T00:00:00.000Z",
     "To": "2023-05-03T00:00:00.000Z"
   },
   {
     "City": "Madrid",
     "Airport": "MAD",
-    "Price (USD)": "185",
+    "Price (USD)": "183",
     "From": "2023-05-20T00:00:00.000Z",
     "To": "2023-05-28T00:00:00.000Z"
   },
   {
     "City": "Málaga",
     "Airport": "AGP",
-    "Price (USD)": "268",
+    "Price (USD)": "265",
     "From": "2023-06-06T00:00:00.000Z",
     "To": "2023-06-14T00:00:00.000Z"
   },
   {
     "City": "Palma de Mallorca",
     "Airport": "PMI",
-    "Price (USD)": "166",
+    "Price (USD)": "178",
     "From": "2023-05-14T00:00:00.000Z",
     "To": "2023-05-22T00:00:00.000Z"
   },
@@ -198,7 +198,7 @@
   {
     "City": "Paris",
     "Airport": "ORY",
-    "Price (USD)": "74",
+    "Price (USD)": "73",
     "From": "2023-06-07T00:00:00.000Z",
     "To": "2023-06-15T00:00:00.000Z"
   },
@@ -212,7 +212,7 @@
   {
     "City": "Athens",
     "Airport": "ATH",
-    "Price (USD)": "221",
+    "Price (USD)": "220",
     "From": "2023-05-09T00:00:00.000Z",
     "To": "2023-05-17T00:00:00.000Z"
   },
@@ -240,7 +240,7 @@
   {
     "City": "Bologna",
     "Airport": "BLQ",
-    "Price (USD)": "93",
+    "Price (USD)": "103",
     "From": "2023-05-21T00:00:00.000Z",
     "To": "2023-05-29T00:00:00.000Z"
   },
@@ -254,7 +254,7 @@
   {
     "City": "Rome",
     "Airport": "FCO",
-    "Price (USD)": "73",
+    "Price (USD)": "72",
     "From": "2023-06-06T00:00:00.000Z",
     "To": "2023-06-14T00:00:00.000Z"
   },
@@ -275,21 +275,21 @@
   {
     "City": "Lisbon",
     "Airport": "LIS",
-    "Price (USD)": "289",
+    "Price (USD)": "288",
     "From": "2023-06-08T00:00:00.000Z",
     "To": "2023-06-16T00:00:00.000Z"
   },
   {
     "City": "Bucharest",
     "Airport": "OTP",
-    "Price (USD)": "96",
+    "Price (USD)": "95",
     "From": "2023-06-18T00:00:00.000Z",
     "To": "2023-06-26T00:00:00.000Z"
   },
   {
     "City": "Geneva",
     "Airport": "GVA",
-    "Price (USD)": "114",
+    "Price (USD)": "118",
     "From": "2023-06-22T00:00:00.000Z",
     "To": "2023-06-30T00:00:00.000Z"
   },
