@@ -4,7 +4,7 @@
   "description": "",
   "main": "flights-scraper.js",
   "scripts": {
-    "start": "xvfb-run --auto-servernum node flights-scraper.js | tee ./results/recent.csv",
+    "start": "xvfb-run --auto-servernum node ./flights-scraper.js | tee /dev/tty | jq -s | jq 'reverse | unique_by({iata})' > results/recent.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

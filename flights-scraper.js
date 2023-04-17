@@ -6,46 +6,46 @@ let BASE_DAY_COUNT = 4;
 
 async function getFlightPrices(destination, options = {}) {
 
-  const { dayCount = 8, initialScroll = 0, maxScroll = 1, page } = options;
+  const { minDayCount = 0, maxDayCount = 14, page } = options;
   let prices = [];
 
+  let ding = () => {};
+
   const urlPredicate = (x) => x.href.includes('GetCalendarGraph');
-  const p = new Promise(
-    async (resolve) => {
-        await page.route(urlPredicate, async (r) => {
-          try {
-            const response = await r.fetch();
-          
-            let body = await response.text();
+  await page.route(urlPredicate, async (r) => {
+    try {
+      const response = await r.fetch();
     
-              const message = /(\[\["wrb.fr".*)/.exec(body)[1];
-              const payload = JSON.parse(message)[0][2];
-              const offers = JSON.parse(payload)[1].map((x) => {
-                if(x && x[2]){
-                  return {
-                    dateFrom: new Date(x[0]),
-                    dateTo: new Date(x[1]),
-                    price: x[2][0][1],
-                  };
-                }
-                else {
-                  return null;
-                }
-              }).filter(x => x);
-  
-              if(offers.length > 0 && offers[0].dateTo - offers[0].dateFrom === dayCount * 24 * 60 * 60 * 1000) {
-                prices = prices.concat(offers);
-                resolve();
-              }
-              
-              await r.fulfill({
-                response,
-              });
+      let body = await response.text();
+
+        const message = /(\[\["wrb.fr".*)/.exec(body)[1];
+        const payload = JSON.parse(message)[0][2];
+        const offers = JSON.parse(payload)[1].map((x) => {
+          if(x && x[2]){
+            return {
+              dateFrom: new Date(x[0]),
+              dateTo: new Date(x[1]),
+              price: x[2][0][1],
+            };
           }
-          catch (e) {
-            console.error(e);
+          else {
+            return null;
           }
+        }).filter(x => x);
+
+        if(offers.length > 0 && offers[0].dateTo - offers[0].dateFrom > minDayCount * 24 * 60 * 60 * 1000 && offers[0].dateTo - offers[0].dateFrom < maxDayCount * 24 * 60 * 60 * 1000) {
+          prices = prices.concat(offers);
+        }
+        
+        await r.fulfill({
+          response,
         });
+    }
+    catch (e) {
+      // console.error(e);
+    }
+
+    ding();
   });
 
   const flush = async () => {
@@ -100,54 +100,76 @@ async function getFlightPrices(destination, options = {}) {
   // }
   
   await page.getByRole('button', { name: 'Price graph' }).click();
+
+  for (let i = BASE_DAY_COUNT; i > minDayCount ; i--) {
+      await page.getByRole('button', { name: 'Reduce your stay by one day' }).click();
+  }
   
-  for (let i = BASE_DAY_COUNT; i < dayCount ; i++) {
+  for (let i = minDayCount; i < maxDayCount ; i++) {
       await page.getByRole('button', { name: 'Extend your stay by one day' }).click();
+      await Promise.race([new Promise(r => ding = r), page.waitForTimeout(5000)]);
   }
 
-  await Promise.race([p, page.waitForTimeout(7500)]);
   await page.getByRole('button', { name: 'Cancel' }).click();
-  
   await page.unroute(urlPredicate);
   return prices;
 };
 
-console.log(`"City","Airport","Price (USD)","From","To"`);
-(async () => {
-  const targetAirports = fs.readFileSync(path.join(__dirname, 'data', 'pragueReachableIATA'), 'utf8')
-    .split('\n')
-    .map(x => x.split(',').map(x => x.replaceAll('"', '')));
+async function spawnBrowser(num) {
+  while(true) {
+    const browser = await chromium.launch({
+      headless: false,
+    });
+    
+    try {
+      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8')).filter((_, i) => i % 4 === num);
 
-  const browser = await chromium.launch({
-    headless: false,
-  });
-  const context = await browser.newContext({
-    recordVideo: process.env['VIDEO']==='true' ? {
-      dir: path.join(__dirname, 'videos'),
-    } : undefined,
-  });
-  const page = await context.newPage();
+      const context = await browser.newContext({
+        recordVideo: process.env['VIDEO']==='true' ? {
+          dir: path.join(__dirname, 'videos'),
+        } : undefined,
+      });
+      const page = await context.newPage();
 
-  await page.goto('https://consent.google.com/m?continue=https://www.google.com/travel/flights&gl=CZ&m=0&pc=trv&cm=2&hl=en-US&src=1');
+      await page.goto('https://consent.google.com/m?continue=https://www.google.com/travel/flights&gl=CZ&m=0&pc=trv&cm=2&hl=en-US&src=1');
 
-  try {
-      await page.getByRole('button', { name: 'Accept all' }).click({timeout: 1000});
-  } catch (e) {
-      // console.error('No cookie banner');
-  };
+      try {
+          await page.getByRole('button', { name: 'Accept all' }).click({timeout: 1000});
+      } catch (e) {
+          // console.error('No cookie banner');
+      };
 
-  await page.locator('.II2One').first().click();
-  await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
-  await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
+      await page.locator('.II2One').first().click();
+      await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
+      await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
 
-  for (const [city, targetAirport] of targetAirports) {
-    const flightprices = await getFlightPrices(targetAirport, { dayCount: 8, page });
-    const minPrice = Math.min(...flightprices.map((x) => x.price));
+      for (const airport of targetAirports) {
+        const flightprices = await getFlightPrices(airport.iata, { dayCount: 8, page });
+        console.log(JSON.stringify({
+          ...airport,
+          flightprices,
+        }, null, 2));
+      }
+    } catch (e) {
+      await browser.close();
+      continue;
+    }
 
-    const m = flightprices.find((x) => x.price === minPrice);
-    console.log(`"${city}","${targetAirport}","${m?.price}","${m?.dateFrom.toISOString()}","${m?.dateTo.toISOString() }"`);
+    await browser.close();
+    return;
   }
+};
 
-  await browser.close();
+(async () => {
+  await Promise.race([
+    Promise.all([
+      spawnBrowser(0),
+      spawnBrowser(1),
+      spawnBrowser(2),
+      spawnBrowser(3),
+    ]),
+    new Promise(r => setTimeout(r, 1000 * 60 * 30)),
+  ]);
+
   process.exit(0);
 })();
