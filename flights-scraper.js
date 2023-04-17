@@ -122,7 +122,7 @@ async function spawnBrowser(num) {
     });
     
     try {
-      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8')).filter((_, i) => i % 4 === num);
+      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8')).filter((_, i) => i % 2 === num);
 
       const context = await browser.newContext({
         recordVideo: process.env['VIDEO']==='true' ? {
@@ -165,8 +165,6 @@ async function spawnBrowser(num) {
     Promise.all([
       spawnBrowser(0),
       spawnBrowser(1),
-      spawnBrowser(2),
-      spawnBrowser(3),
     ]),
     new Promise(r => setTimeout(r, 1000 * 60 * 30)),
   ]);
