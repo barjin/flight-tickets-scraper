@@ -38,11 +38,7 @@ jobs:
 
             -   name: Run the scraper
                 run: |
-                    VIDEO=${{ github.event.inputs.record_videos }} npm start
-            
-            -   name: Convert the csv output to json
-                run: |
-                    scripts/csvToJson.sh results/recent.csv > results/recent.json
+                    VIDEO=${{ github.event.inputs.record_videos }} xvfb-run --auto-servernum npm start | tee >( jq -s | jq 'reverse | unique_by({iata})' > results/recent.json )
 
             -   name: Upload debug videos
                 uses: actions/upload-artifact@v2
