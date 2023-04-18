@@ -45,9 +45,11 @@
 {#await fetchData}
 	<p>Loading data...</p>
 {:then data}
-	{#each data.slice(0,10) as offer}
-		<Offer {...offer} />
-	{/each}
+	<div style="display: flex; flex-direction: column; width">
+		{#each data.slice(0,10) as offer}
+			<Offer {...offer} />
+		{/each}
+	</div>
 {:catch error}
 	<p>An error occurred!</p>
 {/await}
