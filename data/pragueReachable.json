@@ -3,672 +3,672 @@
     "iata": "TLV",
     "e": "🇮🇱",
     "country": "Israel",
-    "label": "Ben Gurion Airport",
+    "label": "Tel Aviv",
     "distance": 2634.4710017039647
   },
   {
     "iata": "VAR",
     "e": "🇧🇬",
     "country": "Bulgaria",
-    "label": "Varna Airport",
+    "label": "Varna",
     "distance": 1283.133668320033
   },
   {
     "iata": "SOF",
     "e": "🇧🇬",
     "country": "Bulgaria",
-    "label": "Vrazhdebna Air Base",
+    "label": "Sofia",
     "distance": 1081.6549338133823
   },
   {
     "iata": "BVC",
     "e": "🇨🇻",
     "country": "Cape Verde",
-    "label": "Aristides Pereira International Airport",
+    "label": "Boa Vista Island",
     "distance": 5028.272210466718
   },
   {
     "iata": "ZAD",
     "e": "🇭🇷",
     "country": "Croatia",
-    "label": "Zadar Airport",
+    "label": "Zadar",
     "distance": 671.3392459757387
   },
   {
     "iata": "LCA",
     "e": "🇨🇾",
     "country": "Cyprus",
-    "label": "Larnaca International Airport",
+    "label": "Larnaca",
     "distance": 2307.2831302735012
   },
   {
     "iata": "PUJ",
     "e": "🇩🇴",
     "country": "Dominican Republic",
-    "label": "Punta Cana International Airport",
+    "label": "Punta Cana",
     "distance": 7915.367559828954
   },
   {
     "iata": "HRG",
     "e": "🇪🇬",
     "country": "Egypt",
-    "label": "Hurghada International Airport",
+    "label": "Hurghada",
     "distance": 3041.674754199082
   },
   {
     "iata": "RMF",
     "e": "🇪🇬",
     "country": "Egypt",
-    "label": "Marsa Alam International Airport",
+    "label": "Marsa Alam",
     "distance": 3237.633126142245
   },
   {
     "iata": "HEL",
     "e": "🇫🇮",
     "country": "Finland",
-    "label": "Helsinki Airport",
+    "label": "Helsinki",
     "distance": 1319.764098462648
   },
   {
     "iata": "KUT",
     "e": "🇬🇪",
     "country": "Georgia",
-    "label": "David the Builder Kutaisi International Airport",
+    "label": "Kutaisi",
     "distance": 2328.596195194589
   },
   {
     "iata": "RHO",
     "e": "🇬🇷",
     "country": "Greece",
-    "label": "Rhodes International Airport \"Diagoras\"",
+    "label": "Rhodes",
     "distance": 1883.5766375608023
   },
   {
     "iata": "ATH",
     "e": "🇬🇷",
     "country": "Greece",
-    "label": "Athens International Airport \"Eleftherios Venizelos\"",
+    "label": "Athens",
     "distance": 1555.5569211522663
   },
   {
     "iata": "BUD",
     "e": "🇭🇺",
     "country": "Hungary",
-    "label": "Budapest Ferenc Liszt International Airport",
+    "label": "Budapest",
     "distance": 470.9197890665536
   },
   {
     "iata": "DUB",
     "e": "🇮🇪",
     "country": "Ireland",
-    "label": "Dublin Airport",
+    "label": "Dublin",
     "distance": 1454.6714522262016
   },
   {
     "iata": "PSR",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Abruzzo Airport",
+    "label": "Pescara",
     "distance": 852.1319210247112
   },
   {
     "iata": "CTA",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Catania-Fontanarossa Airport",
+    "label": "Catania",
     "distance": 1406.246431917085
   },
   {
     "iata": "BRI",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Bari Karol Wojtyła Airport",
+    "label": "Bari",
     "distance": 1015.1177688127426
   },
   {
     "iata": "RMI",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Federico Fellini International Airport",
+    "label": "Rimini",
     "distance": 687.5997548290304
   },
   {
     "iata": "FCO",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Leonardo da Vinci–Fiumicino Airport",
+    "label": "Rome",
     "distance": 936.3442439507537
   },
   {
     "iata": "TSF",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Treviso Airport",
+    "label": "Venice",
     "distance": 518.0906414458051
   },
   {
     "iata": "BLQ",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Bologna Guglielmo Marconi Airport",
+    "label": "Bologna",
     "distance": 657.9586497345499
   },
   {
     "iata": "MXP",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Milan–Malpensa Airport",
+    "label": "Milan",
     "distance": 645.9337239052562
   },
   {
     "iata": "BGY",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Bergamo-Il Caravaggio",
+    "label": "Milan",
     "distance": 598.7975410122197
   },
   {
     "iata": "TRN",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Turin Airport",
+    "label": "Turin",
     "distance": 735.5546888802554
   },
   {
     "iata": "PSA",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Pisa International Airport",
+    "label": "Pisa",
     "distance": 771.374875528368
   },
   {
     "iata": "NAP",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Naples International Airport",
+    "label": "Naples",
     "distance": 1024.7691747434399
   },
   {
     "iata": "VCE",
     "e": "🇮🇹",
     "country": "Italy",
-    "label": "Venice Marco Polo Airport",
+    "label": "Venice",
     "distance": 530.4274555654216
   },
   {
     "iata": "RIX",
     "e": "🇱🇻",
     "country": "Latvia",
-    "label": "Riga International Airport",
+    "label": "Riga",
     "distance": 991.7285910070606
   },
   {
     "iata": "LUX",
     "e": "🇱🇺",
     "country": "Luxembourg",
-    "label": "Luxembourg Airport",
+    "label": "Luxembourg",
     "distance": 579.5410831190594
   },
   {
     "iata": "MLA",
     "e": "🇲🇹",
     "country": "Malta",
-    "label": "Malta International Airport",
+    "label": "Malta",
     "distance": 1583.8071929283158
   },
   {
     "iata": "KIV",
     "e": "🇲🇩",
     "country": "Moldova",
-    "label": "Chișinău International Airport",
+    "label": "Chisinau",
     "distance": 1134.5136907300362
   },
   {
     "iata": "AMS",
     "e": "🇳🇱",
     "country": "Netherlands",
-    "label": "Amsterdam Airport Schiphol",
+    "label": "Amsterdam",
     "distance": 704.9384265611353
   },
   {
     "iata": "EIN",
     "e": "🇳🇱",
     "country": "Netherlands",
-    "label": "Eindhoven Airport",
+    "label": "Eindhoven",
     "distance": 642.1060330031715
   },
   {
     "iata": "WAW",
     "e": "🇵🇱",
     "country": "Poland",
-    "label": "Warsaw Chopin Airport",
+    "label": "Warsaw",
     "distance": 520.9988952278361
   },
   {
     "iata": "KRK",
     "e": "🇵🇱",
     "country": "Poland",
-    "label": "John Paul II International Airport Kraków-Balice",
+    "label": "Krakow",
     "distance": 394.04349205268136
   },
   {
     "iata": "GDN",
     "e": "🇵🇱",
     "country": "Poland",
-    "label": "Gdańsk Lech Wałęsa Airport",
+    "label": "Gdansk",
     "distance": 554.8757683746265
   },
   {
     "iata": "DOH",
     "e": "🇶🇦",
     "country": "Qatar",
-    "label": "Hamad International Airport",
+    "label": "Doha",
     "distance": 4218.636233584462
   },
   {
     "iata": "OTP",
     "e": "🇷🇴",
     "country": "Romania",
-    "label": "Henri Coandă International Airport",
+    "label": "Bucharest",
     "distance": 1081.511556268027
   },
   {
     "iata": "BEG",
     "e": "🇷🇸",
     "country": "Serbia",
-    "label": "Belgrade Nikola Tesla Airport",
+    "label": "Belgrade",
     "distance": 742.1042789055502
   },
   {
     "iata": "KSC",
     "e": "🇸🇰",
     "country": "Slovakia",
-    "label": "Košice International Airport",
+    "label": "Kosice",
     "distance": 529.7825160521544
   },
   {
     "iata": "ICN",
     "e": "🇰🇷",
     "country": "South Korea",
-    "label": "Incheon International Airport",
+    "label": "Seoul",
     "distance": 8236.06684738228
   },
   {
     "iata": "BCN",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Josep Tarradellas Airport Barcelona-El Prat",
+    "label": "Barcelona",
     "distance": 1357.9861097813368
   },
   {
     "iata": "ALC",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Alicante Airport",
+    "label": "Alicante",
     "distance": 1760.5902184576435
   },
   {
     "iata": "TFS",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Tenerife South Airport",
+    "label": "Tenerife",
     "distance": 3572.992571194086
   },
   {
     "iata": "LPA",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Gran Canaria Airport",
+    "label": "Las Palmas",
     "distance": 3511.626716139535
   },
   {
     "iata": "MAD",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Adolfo Suárez Madrid–Barajas Airport",
+    "label": "Madrid",
     "distance": 1750.1933976865482
   },
   {
     "iata": "PMI",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Palma de Mallorca Airport",
+    "label": "Palma De Mallorca",
     "distance": 1480.0961844844135
   },
   {
     "iata": "VLC",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Valencia Airport",
+    "label": "Valencia",
     "distance": 1651.0680305011033
   },
   {
     "iata": "ACE",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "César Manrique Lanzarote Airport",
+    "label": "Lanzarote",
     "distance": 3316.577137074312
   },
   {
     "iata": "AGP",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Málaga-Costa del Sol",
+    "label": "Malaga",
     "distance": 2116.0415422312635
   },
   {
     "iata": "FUE",
     "e": "🇪🇸",
     "country": "Spain",
-    "label": "Fuerteventura Airport",
+    "label": "Fuerteventura",
     "distance": 3375.5361294774193
   },
   {
     "iata": "ARN",
     "e": "🇸🇪",
     "country": "Sweden",
-    "label": "Stockholm Arlanda Airport",
+    "label": "Stockholm",
     "distance": 1087.0505082506115
   },
   {
     "iata": "GOT",
     "e": "🇸🇪",
     "country": "Sweden",
-    "label": "Torslanda Airport",
+    "label": "Gothenburg",
     "distance": 861.1844634306375
   },
   {
     "iata": "GVA",
     "e": "🇨🇭",
     "country": "Switzerland",
-    "label": "Geneva International Airport",
+    "label": "Geneva",
     "distance": 740.8474311355756
   },
   {
     "iata": "ZRH",
     "e": "🇨🇭",
     "country": "Switzerland",
-    "label": "Zürich Airport",
+    "label": "Zurich",
     "distance": 510.62571072080567
   },
   {
     "iata": "ZNZ",
     "e": "🇹🇿",
     "country": "Tanzania",
-    "label": "Abeid Amani Karume International Airport",
+    "label": "Zanzibar",
     "distance": 6708.605478943983
   },
   {
     "iata": "KBV",
     "e": "🇹🇭",
     "country": "Thailand",
-    "label": "Krabi Airport",
+    "label": "Krabi",
     "distance": 8941.523382865395
   },
   {
     "iata": "BRS",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Bristol Airport",
+    "label": "Bristol",
     "distance": 1200.4247954887844
   },
   {
     "iata": "GLA",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Glasgow Airport",
+    "label": "Glasgow",
     "distance": 1400.0821750095918
   },
   {
     "iata": "STN",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "London Stansted Airport",
+    "label": "London",
     "distance": 999.7105422277302
   },
   {
     "iata": "MAN",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Manchester Airport",
+    "label": "Manchester",
     "distance": 1191.674129555305
   },
   {
     "iata": "LHR",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Heathrow Airport",
+    "label": "London",
     "distance": 1044.2170766269023
   },
   {
     "iata": "NCL",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Newcastle International Airport",
+    "label": "Newcastle",
     "distance": 1205.954115888231
   },
   {
     "iata": "EDI",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Edinburgh Airport",
+    "label": "Edinburgh",
     "distance": 1341.2214457905507
   },
   {
     "iata": "LTN",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "London Luton Airport",
+    "label": "London",
     "distance": 1040.8197313988055
   },
   {
     "iata": "BHX",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Birmingham Airport",
+    "label": "Birmingham",
     "distance": 1141.1799262061768
   },
   {
     "iata": "LBA",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "Leeds Bradford Airport",
+    "label": "Leeds",
     "distance": 1164.7393221677448
   },
   {
     "iata": "LGW",
     "e": "🇬🇧",
     "country": "United Kingdom",
-    "label": "London Gatwick Airport",
+    "label": "London",
     "distance": 1024.2483533948664
   },
   {
     "iata": "VIE",
     "e": "🇦🇹",
     "country": "Austria",
-    "label": "Wien-Schwechat Airport",
+    "label": "Vienna",
     "distance": 277.9167861126593
   },
   {
     "iata": "GYD",
     "e": "🇦🇿",
     "country": "Azerbaijan",
-    "label": "Heydar Aliyev International Airport",
+    "label": "Baku",
     "distance": 2963.1571772194593
   },
   {
     "iata": "BRU",
     "e": "🇧🇪",
     "country": "Belgium",
-    "label": "Brussels Airport",
+    "label": "Brussels",
     "distance": 696.5433535776643
   },
   {
     "iata": "CRL",
     "e": "🇧🇪",
     "country": "Belgium",
-    "label": "Brussels South Charleroi Airport",
+    "label": "Brussels",
     "distance": 697.3994172633272
   },
   {
     "iata": "CPH",
     "e": "🇩🇰",
     "country": "Denmark",
-    "label": "Copenhagen Airport",
+    "label": "Copenhagen",
     "distance": 622.7902043609706
   },
   {
     "iata": "BSL",
     "e": "🇫🇷",
     "country": "France",
-    "label": "EuroAirport Basel-Mulhouse-Freiburg",
+    "label": "Basel/Mulhouse",
     "distance": 565.8293895996585
   },
   {
     "iata": "ORY",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Orly Airport",
+    "label": "Paris",
     "distance": 872.0190627743835
   },
   {
     "iata": "BVA",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Beauvais-Tillé Airport",
+    "label": "Paris",
     "distance": 874.1681662693748
   },
   {
     "iata": "LYS",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Lyon-Saint Exupéry Airport",
+    "label": "Lyon",
     "distance": 838.4460990659037
   },
   {
     "iata": "MRS",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Marseille Provence Airport",
+    "label": "Marseille",
     "distance": 1010.2999576212246
   },
   {
     "iata": "CDG",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Paris-Charles de Gaulle Airport",
+    "label": "Paris",
     "distance": 852.5629902745152
   },
   {
     "iata": "BOD",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Bordeaux–Mérignac Airport",
+    "label": "Bordeaux",
     "distance": 1266.0509060510556
   },
   {
     "iata": "NTE",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Nantes Atlantique Airport",
+    "label": "Nantes",
     "distance": 1208.5484158624722
   },
   {
     "iata": "NCE",
     "e": "🇫🇷",
     "country": "France",
-    "label": "Nice Côte d'Azur Airport",
+    "label": "Nice",
     "distance": 892.8387828245627
   },
   {
     "iata": "MUC",
     "e": "🇩🇪",
     "country": "Germany",
-    "label": "Munich Airport",
+    "label": "Munich",
     "distance": 264.5450563304822
   },
   {
     "iata": "DUS",
     "e": "🇩🇪",
     "country": "Germany",
-    "label": "Düsseldorf International Airport",
+    "label": "Duesseldorf",
     "distance": 543.802247012472
   },
   {
     "iata": "FRA",
     "e": "🇩🇪",
     "country": "Germany",
-    "label": "Frankfurt Airport",
+    "label": "Frankfurt",
     "distance": 406.0426510294895
   },
   {
     "iata": "CGN",
     "e": "🇩🇪",
     "country": "Germany",
-    "label": "Cologne Bonn Airport",
+    "label": "Cologne/Bonn",
     "distance": 512.0442570727047
   },
   {
     "iata": "OSL",
     "e": "🇳🇴",
     "country": "Norway",
-    "label": "Oslo Airport, Gardermoen",
+    "label": "Oslo",
     "distance": 1140.8771275104834
   },
   {
     "iata": "SLL",
     "e": "🇴🇲",
     "country": "Oman",
-    "label": "Salalah Airport",
+    "label": "Salalah",
     "distance": 5105.022828265116
   },
   {
     "iata": "MCT",
     "e": "🇴🇲",
     "country": "Oman",
-    "label": "Muscat International Airport",
+    "label": "Muscat",
     "distance": 4795.877560628306
   },
   {
     "iata": "OPO",
     "e": "🇵🇹",
     "country": "Portugal",
-    "label": "Francisco de Sá Carneiro Airport",
+    "label": "Porto",
     "distance": 2024.8905877791558
   },
   {
     "iata": "LIS",
     "e": "🇵🇹",
     "country": "Portugal",
-    "label": "Lisbon Airport",
+    "label": "Lisbon",
     "distance": 2228.967575557821
   },
   {
     "iata": "FNC",
     "e": "🇵🇹",
     "country": "Portugal",
-    "label": "Madeira Airport",
+    "label": "Madeira",
     "distance": 3194.168215434829
   },
   {
     "iata": "SAW",
     "e": "🇹🇷",
     "country": "Turkey",
-    "label": "Istanbul Sabiha Gökçen International Airport",
+    "label": "Istanbul",
     "distance": 1551.246755507087
   },
   {
     "iata": "AYT",
     "e": "🇹🇷",
     "country": "Turkey",
-    "label": "Antalya Airport",
+    "label": "Antalya",
     "distance": 1974.1543374133093
   },
   {
     "iata": "DXB",
     "e": "🇦🇪",
     "country": "United Arab Emirates",
-    "label": "Dubai International Airport",
+    "label": "Dubai",
     "distance": 4463.577157468299
   }
 ]
