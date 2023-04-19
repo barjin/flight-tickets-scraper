@@ -122,7 +122,7 @@ async function spawnBrowser(num) {
     });
     
     try {
-      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8')).filter((_, i) => i % 2 === num);
+      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8'));
 
       const context = await browser.newContext({
         recordVideo: process.env['VIDEO']==='true' ? {
@@ -143,12 +143,14 @@ async function spawnBrowser(num) {
       await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
       await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
 
-      for (const airport of targetAirports) {
+      while (targetAirports.length > 0) {
+        const airport = targetAirports[0];
         const flightprices = await getFlightPrices(airport.iata, { dayCount: 8, page });
         console.log(JSON.stringify({
           ...airport,
           flightprices,
         }, null, 2));
+        targetAirports.shift();
       }
     } catch (e) {
       await browser.close();
@@ -164,7 +166,6 @@ async function spawnBrowser(num) {
   await Promise.race([
     Promise.all([
       spawnBrowser(0),
-      spawnBrowser(1),
     ]),
     new Promise(r => setTimeout(r, 1000 * 60 * 30)),
   ]);
