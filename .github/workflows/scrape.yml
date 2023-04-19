@@ -6,7 +6,7 @@ on:
                 required: false
                 type: boolean
     schedule:
-        - cron: '0 0 * * *'
+        - cron: '0 0/5 * * *'
 
 jobs:
     run_scraper:
@@ -50,6 +50,6 @@ jobs:
                   branch: master
                   commit_message: 'auto: [skip ci] upload scrape results'
                   file_pattern: 'results/*'
-                  commit_user_name: barjin
+                  commit_user_name: 🛫 flightbot 🛬
                   commit_user_email: bot@jindrich.bar
-                  commit_author: barjin <bot@jindrich.bar>
+                  commit_author: 🛫 flightbot 🛬 <bot@jindrich.bar>
