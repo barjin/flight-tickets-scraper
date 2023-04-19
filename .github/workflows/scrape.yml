@@ -1,4 +1,4 @@
-name: Scrape newest flight prices
+name: Scrape flight prices
 on:
     workflow_dispatch:
         inputs:
@@ -9,7 +9,7 @@ on:
         - cron: '0 0 * * *'
 
 jobs:
-    scrape:
+    run_scraper:
         name: Scrape
         runs-on: ubuntu-latest
         steps:
