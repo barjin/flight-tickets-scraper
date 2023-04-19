@@ -1,0 +1,28 @@
+name: Get currency exchange rates
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '30 0 * * *'
+permissions:
+    contents: write
+              
+jobs:
+    # gets rates from https://open.er-api.com/v6/latest/USD
+    get-rates:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Get rates
+              run: |
+                curl -s https://open.er-api.com/v6/latest/USD | jq . > ./results/currency.json
+            
+            - name: Commit the new files
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                branch: master
+                commit_message: 'auto: [skip ci] update conversion rates'
+                file_pattern: 'results/*'
+                commit_user_name: 💵 moneybot 💵
+                commit_user_email: bot@jindrich.bar
+                commit_author: 💵 moneybot 💵 <bot@jindrich.bar>
