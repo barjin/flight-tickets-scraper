@@ -104,6 +104,14 @@
         flex-direction: column;
     }
 
+    .button-holder > *:first-child {
+        border-top-right-radius: 5px;
+    }
+    
+    .button-holder > *:last-child {
+        border-bottom-right-radius: 5px;
+    }
+
     .button:hover {
         cursor: pointer;
     }
@@ -116,7 +124,6 @@
         background-position: center;
         
         border: none;
-        border-radius: 5px;
     }
 
     .flight {
