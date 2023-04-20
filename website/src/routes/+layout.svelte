@@ -1,6 +1,22 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+
+	import { writable } from 'svelte/store';
+	import { setContext } from 'svelte';
+
+	let currencyRates = writable([]);
+	let currency = writable('CZK');
+
+	setContext('currencyRates', currencyRates);
+	setContext('currency', currency);
+
+	(async () => {
+		const response = await fetch('https://raw.githubusercontent.com/barjin/flight-tickets-scraper/master/results/currency.json');
+		const data = await response.json();
+
+		currencyRates.set(data.rates);
+	})();
 </script>
 
 <div class="app">

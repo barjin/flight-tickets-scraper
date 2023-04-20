@@ -1,4 +1,6 @@
 <script>
+  import { getContext } from "svelte";
+
 	const quote = (() => {
 		const quotes = [
 			'Flying cheap is flying smart - Gandhi',
@@ -8,6 +10,16 @@
 
 		return quotes[Math.floor(Math.random() * quotes.length)];
 	})();
+
+	let currencyRates = [];
+	const ratesStore = getContext('currencyRates');
+
+	ratesStore.subscribe((r) => {
+		currencyRates = Object.keys(r ?? []);
+	});
+
+	let pickedCurrency = 'CZK';
+	$: getContext('currency')?.set(pickedCurrency);
 </script>
 
 <header>
@@ -16,6 +28,13 @@
 			<img src='./github.svg' alt="GitHub" />
 		</a>
 		<span><b>{quote}</b></span>
+	</div>
+	<div class="corner">
+		Currency:&nbsp;<select bind:value={pickedCurrency}>
+			{#each currencyRates as currency}
+				<option value={currency}>{currency}</option>
+			{/each}
+		</select>
 	</div>
 </header>
 

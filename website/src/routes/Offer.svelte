@@ -1,15 +1,15 @@
 <script>
     import { getContext } from "svelte";
-	export let airport;
-    export let city;
+	export let iata;
+    export let label;
+    export let e;
     export let price;
-    export let departureDate;
-    export let returnDate;
+    export let dateFrom;
+    export let dateTo;
     export let distance;
+    export let onClick;
 
-    let rates;
     let link = (async () => {
-
         // source https://stackoverflow.com/a/66046176
         const base64_arraybuffer = async (data) => {
             // Use a FileReader to generate a base64 data URI
@@ -27,16 +27,11 @@
             return base64url.split(",", 2)[1];
         }
 
-
-        const iata = airport;
-        const from = new Date(departureDate);
-        const to = new Date(returnDate);
-
         const data = [
             0x08, 0x1C, 0x10, 0x02, 0x1A, 0x23, 0x6A, 0x0C, 0x08, 0x02, 0x12, 0x08,
-            0x2F, 0x6D, 0x2F, 0x30, 0x35, 0x79, 0x77, 0x67, 0x12, 0x0A, ...new TextEncoder().encode(from.toISOString().split('T')[0]), 0x72, 0x07, 0x08, 0x01,
+            0x2F, 0x6D, 0x2F, 0x30, 0x35, 0x79, 0x77, 0x67, 0x12, 0x0A, ...new TextEncoder().encode(new Date(dateFrom).toISOString().split('T')[0]), 0x72, 0x07, 0x08, 0x01,
             0x12, 0x03, ...new TextEncoder().encode(iata), 0x1A, 0x23, 0x6A, 0x07, 0x08, 0x01, 0x12,
-            0x03, ...new TextEncoder().encode(iata), 0x12, 0x0A, ...new TextEncoder().encode(to.toISOString().split('T')[0]), 0x72, 0x0C, 0x08, 0x02, 0x12, 0x08, 0x2F, 0x6D,
+            0x03, ...new TextEncoder().encode(iata), 0x12, 0x0A, ...new TextEncoder().encode(new Date(dateTo).toISOString().split('T')[0]), 0x72, 0x0C, 0x08, 0x02, 0x12, 0x08, 0x2F, 0x6D,
             0x2F, 0x30, 0x35, 0x79, 0x77, 0x67, 0x70, 0x01, 0x82, 0x01, 0x0B, 0x08
         ];
 
@@ -45,27 +40,33 @@
         return `https://www.google.com/travel/flights/search?tfs=${base64}____________AUABSAGYAQE`
     })();
 
-    const currencyStore = getContext('currencyRates');
-
-    currencyStore.subscribe(value => {
+    let rates = null;
+    const ratesStore = getContext('currencyRates');
+    ratesStore.subscribe(value => {
         rates = value;
     });
 
-    const numberOfDays = (new Date(returnDate) - new Date(departureDate)) / (1000 * 60 * 60 * 24);
+    let currency = null;
+    const currencyStore = getContext('currency');
+    currencyStore.subscribe(value => {
+        currency = value;
+    });
+
+    const numberOfDays = (new Date(dateTo) - new Date(dateFrom)) / (1000 * 60 * 60 * 24);
 </script>
 
 {#if rates}
-    <div class="offer">
+    <div class={`offer ${!onClick ? 'other-offer' : ''}`}>
         <div style="flex: 1">
         <span>
             <span style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; align-items: center">
-                <h3>{city} ({airport})</h3>
-                <b style="font-size:120%">{Math.ceil(price * rates['CZK'])} CZK</b>
+                <h3>{e} {label} ({iata})</h3>
+                <b style="font-size:120%">{Math.ceil(price * rates[currency])} {currency}</b>
             </span>
         </span>
         <span>
             <b>{numberOfDays} { numberOfDays > 1 ? 'days' : 'day'}</b>
-            ({(new Date(departureDate)).toLocaleDateString()} - {(new Date(returnDate)).toLocaleDateString()})
+            ({(new Date(dateFrom)).toLocaleDateString()} - {(new Date(dateTo)).toLocaleDateString()})
         </span>
         </div>
         <div class="button-holder">
@@ -76,14 +77,18 @@
                     
                 </a>
             {/await}
-            <div class="button calendar" />
+            {#if onClick}
+                <div class="button calendar" on:click={onClick} />
+            {/if}
         </div>
     </div>
+    <slot/>
 {:else}
     <p>Loading currency rates...</p>
 {/if}
 
 <style>
+
     .offer {
         border-radius: 5px;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -96,12 +101,18 @@
         width: 25rem;
     }
 
+    .other-offer {
+        width: 24rem;
+        margin-left: 1rem;
+    }
+
     .button-holder {
         height:100%;
-        width: 5rem;
+        width: 3.5rem;
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     }
 
     .button-holder > *:first-child {
@@ -119,20 +130,28 @@
     .button {
         flex: 1;
         width: 100%;
-        background-size: 50%;
+        background-size: 30%;
         background-repeat: no-repeat;
         background-position: center;
-        
+        transition: background-color 0.2s ease-in-out;
         border: none;
     }
 
     .flight {
         background-image: url('/plane.svg');
-        background-color: rgb(13, 53, 112);
+        background-color: rgb(37, 117, 238);
+    }
+    
+    .flight:hover {
+        background-color: rgb(5, 63, 150);
     }
 
     .calendar {
         background-image: url('/calendar.svg');
         background-color: rgb(255, 187, 40);
+    }
+
+    .calendar:hover {
+        background-color: rgb(255, 153, 0);
     }
 </style>

@@ -1,83 +1,80 @@
 <script>
-	import Offer from './Offer.svelte';
-	import { setContext } from 'svelte';
-	import { writable } from 'svelte/store';
+	import Destination from "./Destination.svelte";
 
-	function sanitizeData(data) {
-		return data
-		.filter(x => x.flightprices.length > 0)
-		.map((item) => {
-			const bestOffer = item.flightprices.sort((a,b) => a.price - b.price)[0];
-			
-			return {
-				city: `${item.e} ${item.label}`,
-				airport: item.iata,
-				price: bestOffer.price,
-				departureDate: bestOffer.dateFrom,
-				returnDate: bestOffer.dateTo,
-				distance: item.distance,
-				e: item.e
+	function normalizeRecords(airportRecord) {
+		const { flightprices } = airportRecord;
+		
+		return flightprices.map((flightprice) => {
+			const x = {
+				...flightprice,
+				...airportRecord,
 			};
+
+			delete x.flightprices;
+
+			return x;
 		});
 	}
 
 	const url = "https://raw.githubusercontent.com/barjin/flight-tickets-scraper/master/results/recent.json";
-	const currencyUrl = "https://raw.githubusercontent.com/barjin/flight-tickets-scraper/master/results/currency.json";
 
 	let data = Promise.resolve([]);
 
 	let sortMode = 'price';
 	let query = '';
 
-	let currencyRates = writable(null);
-	setContext('currencyRates', currencyRates);
-
-	function sort(data, sortMode) {
+	function sorter(a,b) {
 		if (sortMode === 'price') {
-			return data.sort((a,b) => a.price - b.price);
-		} else if (sortMode === 'distance') {
-			return data.sort((a,b) => a.distance - b.distance);
+			return a.price - b.price;
 		} else if (sortMode === 'priceforkm') {
-			return data.sort((a,b) => (a.price / a.distance) - (b.price / b.distance));
+			return (a.price / a.distance) - (b.price / b.distance);
+		} else if (sortMode === 'distance') {
+			return a.distance - b.distance;
 		} else if (sortMode === 'distance_des') {
-			return data.sort((a,b) => (b.distance) - (a.distance));
+			return b.distance - a.distance;
 		}
 	}
 
-	let rawData = (async () => {
+	let destinations = (async () => {
 		const response = await fetch(url);
     	const data = await response.json();
 
-		return sort(sanitizeData(data), sortMode);
+		return data
+			.map(normalizeRecords)
+			.filter(x => x.length > 0)
 	})();
 
-	$: data = rawData.then(data => {
-		if (query) {
-			return sort(data.filter(x => 
-				x.city.toLowerCase().includes(query.toLowerCase()) || 
-				x.airport.toLowerCase().includes(query.toLowerCase()) ||
-				x.e.toLowerCase().includes(query.toLowerCase())
-			), sortMode);
-		} else {
-			return sort(data, sortMode);
+	$: filteredData = (async () => {
+		if(sortMode){} // to trick svelte into reordering on sortMode change
+
+		const data = (await destinations)
+				.map(x => x.sort(sorter))
+				.sort((a,b) => sorter(a[0], b[0]));
+
+		if (query === '') {
+			return data;
 		}
-	});
-	
-	(async () => {
-		const response = await fetch(currencyUrl);
-		const data = await response.json();
-		$currencyRates = data.rates;
+
+		return data.filter(x => 
+			x[0].label.toLowerCase().includes(query.toLowerCase()) 
+			|| x[0].iata.toLowerCase().includes(query.toLowerCase()) 
+			|| x[0].e.toLowerCase().includes(query.toLowerCase()));
 	})();
 </script>
 
 <pre>Last update at {(new Date().toLocaleDateString())}, 00:00</pre>
 <div class="inputs">
+	<div>Flying from: 
+		<select>
+			<option value="PRG">Prague (PRG)</option>
+		</select>
+	</div>
 	<input bind:value={query} placeholder="Search..." />
 	<div class="country-buttons">
-		{#await data}
+		{#await filteredData}
 			<div></div>
-		{:then data} 
-			{#each data.slice(0,5).map(x => x.e).filter((x,i,a) => a.findIndex(b => b === x) === i) as emoji}
+		{:then filteredData} 
+			{#each filteredData.slice(0,5).map(x => x[0].e).filter((x,i,a) => a.findIndex(b => b === x) === i) as emoji}
 				<button on:click={() => {query = emoji}}>{emoji}</button>
 			{/each}
 		{/await}
@@ -92,12 +89,12 @@
 		</select>
 	</div>
 </div>
-{#await data}
-	<p>Loading data...</p>
-{:then data}
+{#await filteredData}
+	<p>Loading destinations...</p>
+{:then filteredData}
 	<div style="display: flex; flex-direction: column; width">
-		{#each sort(data, sortMode).slice(0,10) as offer}
-			<Offer {...offer} />
+		{#each filteredData.slice(0,5) as offers}
+			<Destination {offers}/>
 		{/each}
 	</div>
 {:catch error}
