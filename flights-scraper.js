@@ -118,9 +118,9 @@ async function getFlightPrices(destination, options = {}) {
 
 async function spawnPage(context, targetAirports) {
   while(true) {
+    const page = await context.newPage();
+    
     try {
-      const page = await context.newPage();
-
       await page.goto('https://consent.google.com/m?continue=https://www.google.com/travel/flights&gl=CZ&m=0&pc=trv&cm=2&hl=en-US&src=1');
 
       try {
@@ -142,9 +142,9 @@ async function spawnPage(context, targetAirports) {
           }, null, 2));
           targetAirports.shift();
         }
-      } catch (e) {
-        await page.close();
-        continue;
+    } catch (e) {
+      await page.close();
+      continue;
     }
 
     await page.close();

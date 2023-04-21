@@ -36,7 +36,7 @@ jobs:
                 run: rm -rf videos/*
 
             -   name: Run the scraper
-                run: VIDEO=${{ github.event.inputs.record_videos }} xvfb-run --auto-servernum node ./flights-scraper.js | tee >( jq -s | jq 'reverse | unique_by({iata})' > results/recent.json ) | jq .label ; echo "done!"
+                run: VIDEO=${{ github.event.inputs.record_videos }} xvfb-run --auto-servernum node ./flights-scraper.js | tee >( jq -s | jq 'reverse | unique_by({iata})' > results/recent.json ) | jq .label
 
             -   name: Upload debug videos
                 uses: actions/upload-artifact@v2
