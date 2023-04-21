@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 let BASE_DAY_COUNT = 4;
+const concurrency = 3;
 
 async function getFlightPrices(destination, options = {}) {
 
@@ -115,58 +116,74 @@ async function getFlightPrices(destination, options = {}) {
   return prices;
 };
 
-async function spawnBrowser(num) {
+async function spawnPage(context, targetAirports) {
   while(true) {
-    const browser = await chromium.launch({
-      headless: false,
-    });
-    
     try {
-      const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8'));
-
-      const context = await browser.newContext({
-        recordVideo: process.env['VIDEO']==='true' ? {
-          dir: path.join(__dirname, 'videos'),
-        } : undefined,
-      });
       const page = await context.newPage();
 
       await page.goto('https://consent.google.com/m?continue=https://www.google.com/travel/flights&gl=CZ&m=0&pc=trv&cm=2&hl=en-US&src=1');
 
       try {
-          await page.getByRole('button', { name: 'Accept all' }).click({timeout: 1000});
+            await page.getByRole('button', { name: 'Accept all' }).click({timeout: 1000});
+        } catch (e) {
+            // console.error('No cookie banner');
+        };
+
+        await page.locator('.II2One').first().click();
+        await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
+        await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
+
+        while (targetAirports.length > 0) {
+          const airport = targetAirports[0];
+          const flightprices = await getFlightPrices(airport.iata, { dayCount: 8, page });
+          console.log(JSON.stringify({
+            ...airport,
+            flightprices,
+          }, null, 2));
+          targetAirports.shift();
+        }
       } catch (e) {
-          // console.error('No cookie banner');
-      };
-
-      await page.locator('.II2One').first().click();
-      await page.getByRole('combobox', { name: 'Where else?' }).fill('Praha');
-      await page.getByRole('combobox', { name: 'Where else?' }).press('Enter');
-
-      while (targetAirports.length > 0) {
-        const airport = targetAirports[0];
-        const flightprices = await getFlightPrices(airport.iata, { dayCount: 8, page });
-        console.log(JSON.stringify({
-          ...airport,
-          flightprices,
-        }, null, 2));
-        targetAirports.shift();
-      }
-    } catch (e) {
-      await browser.close();
-      continue;
+        await page.close();
+        continue;
     }
 
-    await browser.close();
+    await page.close();
     return;
   }
 };
 
 (async () => {
+  const browser = await chromium.launch({
+    // headless: false,
+  });
+  
+  const targetAirports = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pragueReachable.json'), 'utf8'));
+
+  const context = await browser.newContext({
+    recordVideo: process.env['VIDEO']==='true' ? {
+      dir: path.join(__dirname, 'videos'),
+    } : undefined,
+  });
+
+  await context.route('**', async (route, request) => {
+    const type = request.resourceType();
+    if ([ 'stylesheet', 'font', 'image' ].includes(type)) {
+      await route.abort();
+    } else {
+      await route.continue();
+    }
+  });
+
+  const chunk = targetAirports.length / concurrency;
+  
   await Promise.race([
-    Promise.all([
-      spawnBrowser(0),
-    ]),
+    Promise.all(
+      Array.from({ length: concurrency }, (_, i) => {
+        const start = Math.floor(chunk * i);
+        const end = Math.floor(chunk * (i + 1));
+        return spawnPage(context, targetAirports.slice(start, i !== concurrency - 1 ? end : undefined));
+      })
+    ),
     new Promise(r => setTimeout(r, 1000 * 60 * 30)),
   ]);
 
