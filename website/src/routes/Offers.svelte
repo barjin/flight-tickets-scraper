@@ -18,10 +18,10 @@
 
 	const url = "https://raw.githubusercontent.com/barjin/flight-tickets-scraper/master/results/recent.json";
 
-	let data = Promise.resolve([]);
-
 	let sortMode = 'price';
 	let query = '';
+	let dateStart = 0;
+	let dateEnd = +Date.now() + 1000 * 60 * 60 * 24 * 365;
 
 	function sorter(a,b) {
 		if (sortMode === 'price') {
@@ -48,8 +48,14 @@
 		if(sortMode){} // to trick svelte into reordering on sortMode change
 
 		const data = (await destinations)
-				.map(x => x.sort(sorter))
-				.sort((a,b) => sorter(a[0], b[0]));
+			.map(destination => {
+				return destination.filter(x => {
+					return new Date(x.dateFrom) >= new Date(dateStart) && new Date(x.dateTo) <= new Date(dateEnd);
+				})
+			})
+			.filter(x => x.length > 0)
+			.map(x => x.sort(sorter))
+			.sort((a,b) => sorter(a[0], b[0]));
 
 		if (query === '') {
 			return data;
@@ -79,6 +85,14 @@
 			{/each}
 		{/await}
 	</div>
+	<div class="dateRow">
+		Search from:
+		<input type="date" bind:value={dateStart}>
+	</div>
+	<div class="dateRow">
+		Search to:
+		<input type="date" bind:value={dateEnd}/>
+	</div>
 	<div>
 		Sort by: 
 		<select bind:value={sortMode}>
@@ -93,7 +107,7 @@
 	<p>Loading destinations...</p>
 {:then filteredData}
 	<div style="display: flex; flex-direction: column; width">
-		{#each filteredData.slice(0,5) as offers}
+		{#each filteredData.slice(0,10) as offers}
 			<Destination {offers}/>
 		{/each}
 	</div>
@@ -131,5 +145,12 @@
 		border-radius: 5px;
 		margin: 5px;
 		font-size: 2rem;
+	}
+
+	.dateRow {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 80%
 	}
 </style>
