@@ -1,8 +1,6 @@
 name: Get currency exchange rates
 on:
     workflow_dispatch:
-    schedule:
-        - cron: '30 0 * * *'
 permissions:
     contents: write
               
